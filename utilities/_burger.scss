@@ -1,0 +1,66 @@
+@mixin burger-line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: $green;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-delay: 0.5s;
+}
+
+.burger {
+  padding: 1rem;
+  display: none;
+
+  @media only screen and (max-width: 810px) {
+    display: inline-block;
+  }
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  justify-self: flex-end;
+  z-index: 30;
+
+  transition: transform 0.3s;
+
+  &__box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__inner {
+    @include burger-line;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__inner::before,
+  &__inner::after {
+    @include burger-line;
+
+    content: "";
+    left: 0;
+  }
+  &__inner::before {
+    top: -12px;
+  }
+  &__inner::after {
+    top: 12px;
+  }
+
+  &--active {
+    transform: translateX(-240px);
+  }
+
+  &--active .burger__inner {
+    color: #fff;
+    background-color: transparent;
+  }
+  &--active .burger__inner:before {
+    transform: translateY(12px) rotate(-45deg);
+  }
+  &--active .burger__inner:after {
+    transform: translateY(-12px) rotate(45deg);
+  }
+}

@@ -1,0 +1,30 @@
+.clients {
+  &__comment {
+    width: 40%;
+    margin: 14rem 0;
+    line-height: 4rem;
+    &--1 {
+      margin-left: 35%;
+    }
+    &--2 {
+      margin-left: 20%;
+    }
+
+    @media only screen and (max-width: 680px) {
+      width: 90%;
+      margin: 10rem auto;
+    }
+  }
+
+  &__author {
+    display: block;
+    color: $green;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__secondheader {
+    font-weight: 400;
+    font-size: 2.4rem;
+  }
+}

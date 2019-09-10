@@ -1,0 +1,31 @@
+.contact {
+    background-color: $green;
+    padding: 6rem 0;
+
+    &__mainheader {
+        color: $font-white;
+        margin-top: 0;
+
+    }
+
+    &__btn {
+        border: 5px solid $font-white;
+        border-radius: 10px;
+        margin: 3rem auto;
+        font-size: 2rem;
+        text-shadow: none;
+        line-height: 5rem;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 10px $font-white;
+        }
+
+        &:active {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 5px $font-white;
+        }
+
+    }
+}

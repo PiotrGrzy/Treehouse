@@ -1,0 +1,35 @@
+.mobile {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($green, 0.9);
+  padding: 3rem;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(260px);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin: 4rem 0;
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgb(34, 34, 34);
+  }
+}
+
+.mobile--active {
+  transform: translateX(0);
+}

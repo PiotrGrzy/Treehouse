@@ -1,0 +1,97 @@
+/* 
+   background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
+        url('../img/hero-small.jpg');
+    background-size: cover;
+    background-position: top;
+*/
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    background-color: beige;
+    z-index: 10;
+
+    @media only screen and (max-width: 810px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+
+    @media only screen and (max-width: 810px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    margin: 0 3rem;
+    transition: all 0.2s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $font-dark;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__main {
+    margin-top: 8rem;
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(rgb(27, 27, 27), 0.8),
+        rgba(rgb(27, 27, 27), 0.8)
+      ),
+      url("../img/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__header {
+    display: block;
+    margin-top: 10rem;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: $font-white;
+    max-width: 70rem;
+    text-align: center;
+  }
+
+  &__paragraph {
+    padding: 4rem;
+    font-size: 2rem;
+    color: $font-white;
+  }
+
+  &__btn {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+  }
+}

@@ -1,0 +1,48 @@
+.services {
+  &__paragraph {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    color: $font-dark;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin: 12rem 0;
+
+    @media only screen and (max-width: 810px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 30rem;
+    margin: 0 2rem;
+
+    @media only screen and (max-width: 810px) {
+      margin: 3rem 0;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin-bottom: 4rem;
+  }
+
+  &__cardheader {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  &__cardparagraph {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+}

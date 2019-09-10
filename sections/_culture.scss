@@ -1,0 +1,68 @@
+.culture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        margin-top: 8rem;
+        margin-bottom: 12rem;
+        display: flex;
+
+        @media only screen and (max-width: 940px) {
+            flex-direction: column;
+            margin-bottom: 4rem;
+        }
+
+
+    }
+
+    &__icon {
+        margin: 3rem 0;
+        border: 3px solid rgb(128, 128, 128);
+        border-radius: 50%;
+
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &--middle::before,
+        &--middle::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 1px;
+            top: 7rem;
+            border: 2px solid rgb(128, 128, 128);
+            position: absolute;
+            z-index: 50;
+
+
+            @media only screen and (max-width: 940px) {
+                display: none;
+            }
+
+
+        }
+
+        &--middle::before {
+            left: -25%;
+        }
+
+        &--middle::after {
+            right: -25%;
+        }
+    }
+
+    &__smallheader {
+        text-align: center;
+    }
+
+
+    &__paragraph {
+        text-align: center;
+    }
+}

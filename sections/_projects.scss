@@ -1,0 +1,72 @@
+.projects {
+    position: relative;
+    overflow: hidden;
+
+    &__secondheader {}
+
+    &__container {
+        background: rgba($font-white, .5);
+        margin: 10rem 0 10rem 20rem;
+        max-width: 600px;
+
+
+        @media only screen and (max-width: 940px) {
+            margin: 10rem auto;
+            padding: 2rem;
+        }
+
+    }
+
+    &__item {
+        margin-top: 2rem;
+        display: flex;
+    }
+
+
+    &__parag2 {
+        @extend .paragraph;
+        margin: 0;
+    }
+
+
+    &__icon {
+        width: 9rem;
+        height: 9rem;
+        display: block;
+        border: 3px solid $font-black;
+        border-radius: 50%;
+        margin-right: 2rem;
+    }
+
+    &__textscontainer {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $green;
+        display: block;
+        margin: 3rem 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        transition: transform .2s;
+
+        &:hover {
+            transform: translateX(10px);
+        }
+    }
+
+    &__img {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(30%, -40%) scale(1.2);
+        z-index: -1;
+
+    }
+
+
+}
